@@ -1,0 +1,159 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-family: Avenir-Book, sans-serif;
+  color: #222222;
+  text-align: center;
+  height: 100vh;
+  margin: 0px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  height: 100%;
+}
+
+footer {
+  background-color: #EFEFEF;
+  font-family: Avenir-Black;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 12%;
+  padding: 0px 12px 12px 12px;
+}
+
+.outer {
+  /* To change the background color of the modal, change the rgba configuration.  The last parameter (0.8) configures the opacity. */
+  background-color: rgba(0,0,0,0.8);
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  position: absolute;
+  overflow: hidden;
+  width: 85%;
+  height: 72%;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('');
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  padding: 22px;
+}
+
+.button-close {
+  position: absolute;
+  z-index: 99;
+  right: 12px;
+  top: 12px;
+}
+
+.main-image {
+  overflow: hidden;
+  width: 35%;
+  margin: 5% auto 0% auto;
+}
+
+.main-image img {
+  border-radius: 15px;
+}
+
+.header {
+  font-family: Avenir-Medium;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  font-family: Avenir-Book;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.bottom-container {
+  background-color: #EFEFEF;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 38%;
+  padding: 0px 12px 12px 12px;
+}
+
+.button-center {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.button-center p {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rate-the-stars {
+  color: #222222;
+  font-size: 13px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.stars {
+  color: #D8D8D8;
+  font-size: 38px;
+  letter-spacing: 0.05em;
+  display: inline;
+}
+
+.star {
+  color: #F3D02A
+}
+
+/* Smaller Devices (iPhone 5, etc) */
+@media only screen and (max-device-width: 568px) {
+  .message {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .rate-the-stars {
+    font-size: 11px;
+  }
+}
+
+/* Tablets (iPads, etc) */
+@media only screen and (min-device-width: 768px) {
+  .modal {
+    width: 45%;
+    height: 50%;
+  }
+}

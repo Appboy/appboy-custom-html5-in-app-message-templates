@@ -1,0 +1,143 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-family: Avenir-Book, sans-serif;
+  color: #222222;
+  text-align: center;
+  height: 100vh;
+  margin: 0px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  height: 100%;
+}
+
+footer {
+  font-family: Avenir-Black;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 10%;
+  padding: 0px 22px 22px 22px;
+}
+
+.outer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+}
+
+.top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  padding: 22px;
+}
+
+.button-close {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  z-index: 99;
+}
+
+.main-image {
+  overflow: hidden;
+  position: absolute;
+  width: 60%;
+  left: 0;
+  right: 0;
+  bottom: 12%;
+  margin: 0 auto;
+}
+
+.main-image img {
+  border-radius: 15px;
+}
+
+.header {
+  font-family: Avenir-Medium;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  font-family: Avenir-Book;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.bottom-container {
+  overflow: hidden;
+  width: 100%;
+  height: 40%;
+  padding: 0px 22px 22px 22px;
+}
+
+.button-center {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.button-center p {
+  margin: 0;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Smaller Devices (iPhone 5, etc) */
+@media only screen and (max-device-width: 568px) {
+  .message {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+/* Tablets (iPads, etc) */
+@media only screen and (min-device-width: 768px) {
+  body {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  footer {
+    padding: 0px 12px 12px 12px;
+  }
+
+  .outer {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 45%;
+    height: 50%;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .button-close {
+    right: 12px;
+    top: 12px;
+  }
+
+  .button-close img {
+    width: 15px;
+  }
+}
