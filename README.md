@@ -9,7 +9,7 @@ Appboy provides the ability to create campaigns with fully customizable In-App M
 
 To get started, clone this repo into any directory of your choice by clicking the "Clone or download" button in this repo, copying the URL, and enter `git clone <copied url>` into your terminal.  This will download all of the templates and their respective files for you to edit.
 
-<img src="/_images/git-clone.gif" width="600">
+<img src="/_images/git-clone.gif" width="860">
 
 # Templates
 
