@@ -20,16 +20,16 @@ $(document).ready(function(){
     var footer;
     if (slick.slideCount >= 2) {
       if (slick.currentSlide === slick.slideCount-2 && slick.currentDirection == 0) {
-        footer = `<div class='button-center'>
-                    <a href='appboy://close'><p>GOT IT!</p></a>
-                  </div>`
+        footer = "<div class='button-center'>"+
+                   "<a href='appboy://close'><p>GOT IT!</p></a>"+
+                 "</div>"
       } else {
-        footer = `<div class='button-left'>
-                    <a href='appboy://close'><p>SKIP</p></a>
-                  </div>
-                  <div class='button-right'>
-                    <a href=''><p>NEXT</p></a>
-                  </div>`
+        footer = "<div class='button-left'>"+
+                   "<a href='appboy://close'><p>SKIP</p></a>"+
+                 "</div>"+
+                 "<div class='button-right'>"+
+                   "<a href=''><p>NEXT</p></a>"+
+                 "</div>"
       };
       $('footer').html(footer);
     };
