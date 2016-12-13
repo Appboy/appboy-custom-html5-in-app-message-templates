@@ -87,7 +87,6 @@ footer {
 }
 
 .button-left {
-  display: table;
   background-color: #425271;
   border-radius: 5px;
   float: left;
@@ -105,7 +104,6 @@ footer {
 }
 
 .button-right {
-  display: table;
   background-color: #3CCE93;
   border-radius: 5px;
   float: right;
