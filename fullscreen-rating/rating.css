@@ -17,7 +17,7 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #FFFFFF;
 }
 
 footer {
@@ -32,10 +32,10 @@ footer {
 
 .outer {
   background-color: #FFFFFF;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   position: absolute;
 }
 
@@ -61,7 +61,7 @@ footer {
   position: relative;
   width: 50%;
   height: 50%;
-  bottom: 0;
+  bottom: 0px;
   margin: 12% auto 0% auto;
 }
 
@@ -112,10 +112,10 @@ footer {
   color: #222222;
   font-size: 13px;
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 30px;
-  right: 0;
-  bottom: 0;
+  right: 0px;
+  bottom: 0px;
   margin: auto;
 }
 
@@ -158,10 +158,10 @@ footer {
     width: 45%;
     height: 50%;
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     margin: auto;
   }
 

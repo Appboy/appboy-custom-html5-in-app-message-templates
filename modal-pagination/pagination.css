@@ -34,23 +34,26 @@ footer {
 .outer {
   /* To change the background color of the modal, change the rgba configuration.  The last parameter (0.8) configures the opacity. */
   background-color: rgba(0,0,0,0.8);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   position: absolute;
 }
 
 .modal {
   display: block;
   position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
   margin: auto;
   width: 85%;
   height: 70%;
+  z-index: 999;
 }
 
 .top-container {
