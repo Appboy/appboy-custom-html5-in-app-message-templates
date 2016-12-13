@@ -17,12 +17,12 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
-  height: 100%;
+  color: #FFFFFF;
 }
 
 footer {
   background-color: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
   font-family: Avenir-Black;
   font-size: 15px;
   letter-spacing: 0.02em;
@@ -42,11 +42,7 @@ footer {
 }
 
 .modal {
-  background-color: #FFFFFF;
-  border-radius: 10px;
-  overflow: hidden;
   display: block;
-  overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;
@@ -91,7 +87,6 @@ footer {
 .button-left {
   background-color: #425271;
   border-radius: 5px;
-  position: relative;
   float: left;
   width: 47%;
   height: 100%;
@@ -100,7 +95,6 @@ footer {
 .button-right {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   float: right;
   width: 47%;
   height: 100%;
@@ -109,16 +103,20 @@ footer {
 .button-center {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
+.button-left a, .button-right a, .button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 .button-left p, .button-right p, .button-center p {
-  margin: 0;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .slick-container {

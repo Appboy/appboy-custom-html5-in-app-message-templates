@@ -18,10 +18,10 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  height: 100%;
 }
 
 footer {
+  background-color: #FFFFFF;
   font-family: Avenir-Black;
   font-size: 15px;
   letter-spacing: 0.02em;
@@ -36,7 +36,6 @@ footer {
   left: 0;
   right: 0;
   position: absolute;
-  background-color: #fff;
 }
 
 .top-container {
@@ -82,6 +81,7 @@ footer {
 }
 
 .bottom-container {
+  background-color: #FFFFFF;
   overflow: hidden;
   width: 100%;
   height: 40%;
@@ -91,16 +91,20 @@ footer {
 .button-center {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
+.button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 .button-center p {
-  margin: 0;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /* Smaller Devices (iPhone 5, etc) */
@@ -118,19 +122,23 @@ footer {
   }
 
   footer {
+    border-radius: 0px 0px 10px 10px;
     padding: 0px 12px 12px 12px;
   }
 
   .outer {
-    border-radius: 10px;
-    overflow: hidden;
     width: 45%;
     height: 50%;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .top-container {
+    border-radius: 10px 10px 0px 0px;
   }
 
   .button-close {

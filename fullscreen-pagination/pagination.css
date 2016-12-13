@@ -18,7 +18,6 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
-  height: 100%;
 }
 
 footer {
@@ -88,9 +87,9 @@ footer {
 }
 
 .button-left {
+  display: table;
   background-color: #425271;
   border-radius: 5px;
-  position: relative;
   float: left;
   width: 47%;
   height: 100%;
@@ -106,9 +105,9 @@ footer {
 }
 
 .button-right {
+  display: table;
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   float: right;
   width: 47%;
   height: 100%;
@@ -117,16 +116,20 @@ footer {
 .button-center {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
+.button-left a, .button-right a, .button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 .button-left p, .button-right p, .button-center p {
-  margin: 0;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .slick-container {
@@ -207,14 +210,14 @@ footer {
 
   .outer {
     border-radius: 10px;
-    overflow: hidden;
     width: 45%;
     height: 50%;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   .button-close {
