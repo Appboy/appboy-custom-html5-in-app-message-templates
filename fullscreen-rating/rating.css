@@ -9,7 +9,6 @@ body {
   font-family: Avenir-Book, sans-serif;
   color: #222222;
   text-align: center;
-  height: 100vh;
   margin: 0px;
 }
 
@@ -18,8 +17,7 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
-  height: 100%;
+  color: #FFFFFF;
 }
 
 footer {
@@ -33,10 +31,12 @@ footer {
 }
 
 .outer {
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  background-color: #FFFFFF;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
 }
 
 .top-container {
@@ -61,7 +61,7 @@ footer {
   position: relative;
   width: 50%;
   height: 50%;
-  bottom: 0;
+  bottom: 0px;
   margin: 12% auto 0% auto;
 }
 
@@ -92,27 +92,31 @@ footer {
 .button-center {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
+.button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 .button-center p {
-  margin: 0;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .rate-the-stars {
   color: #222222;
   font-size: 13px;
-  margin: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  left: 0px;
+  top: 30px;
+  right: 0px;
+  bottom: 0px;
+  margin: auto;
 }
 
 .stars {
@@ -146,18 +150,19 @@ footer {
 
   footer {
     padding: 0px 12px 12px 12px;
+    border-radius: 0px 0px 10px 10px;
   }
 
   .outer {
     border-radius: 10px;
-    overflow: hidden;
     width: 45%;
     height: 50%;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
   }
 
   .button-close {
