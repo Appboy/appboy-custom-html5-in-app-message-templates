@@ -5,12 +5,10 @@
 }
 
 body {
-
   -webkit-text-size-adjust: 100%;
   font-family: Avenir-Book, sans-serif;
   color: #222222;
   text-align: center;
-  height: 100vh;
   margin: 0px;
 }
 
@@ -19,11 +17,13 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
-  height: 100%;
+  color: #FFFFFF;
 }
 
 footer {
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
   font-family: Avenir-Black;
   font-size: 15px;
   letter-spacing: 0.02em;
@@ -35,29 +35,30 @@ footer {
 .outer {
   /* To change the background color of the modal, change the rgba configuration.  The last parameter (0.8) configures the opacity. */
   background-color: rgba(0,0,0,0.8);
-  width: 100%;
-  height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 .modal {
-  background-color: #FFFFFF;
   border-radius: 10px;
   position: absolute;
-  overflow: hidden;
   width: 85%;
   height: 70%;
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
 }
 
 .top-container {
   /* Change the background-image url to a image of your choice */
   background-image: url('background-dark-blue.png');
   background-size: cover;
+  border-radius: 10px 10px 0px 0px;
   width: 100%;
   height: 45%;
   padding: 22px;
@@ -68,11 +69,6 @@ footer {
   z-index: 99;
   right: 12px;
   top: 12px;
-}
-
-.main-image {
-  border-radius: 15px;
-  overflow: hidden;
 }
 
 .header {
@@ -87,6 +83,7 @@ footer {
 }
 
 .bottom-container {
+  background-color: #FFFFFF;
   overflow: hidden;
   width: 100%;
   height: 43%;
@@ -96,16 +93,20 @@ footer {
 .button-center {
   background-color: #3CCE93;
   border-radius: 5px;
-  position: relative;
   width: 100%;
   height: 100%;
 }
 
+.button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
 .button-center p {
-  margin: 0;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  vertical-align: middle;
+  display: table-cell;
 }
 
 /* Smaller Devices (iPhone 5, etc) */

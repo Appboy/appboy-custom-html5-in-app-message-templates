@@ -23,7 +23,7 @@ $(document).ready(function(){
         footer = "<div class='button-center'>"+
                    "<a href='appboy://close'><p>GOT IT!</p></a>"+
                  "</div>"
-      } else {
+      } else if (slick.currentSlide === slick.slideCount-1 && slick.currentDirection == 1) {
         footer = "<div class='button-left'>"+
                    "<a href='appboy://close'><p>SKIP</p></a>"+
                  "</div>"+
