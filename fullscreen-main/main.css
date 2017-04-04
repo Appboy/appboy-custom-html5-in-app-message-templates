@@ -150,3 +150,26 @@ footer {
     width: 15px;
   }
 }
+
+/* Landscape for mobile phones */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 12%;
+    padding: 0px 11px 11px 11px;
+  }
+
+  .main-image img {
+    width: 45%;
+  }
+
+  .top-container {
+    height: 48%;
+  }
+}
+
+/* Landscape for tablets  */
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  .main-image img {
+    width: 65%;
+  }
+}
