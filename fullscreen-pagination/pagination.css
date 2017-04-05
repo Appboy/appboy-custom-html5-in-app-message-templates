@@ -66,6 +66,7 @@ footer {
 
 .main-image img {
   border-radius: 15px;
+  margin: auto;
 }
 
 .header {
@@ -225,5 +226,40 @@ footer {
 
   .button-close img {
     width: 15px;
+  }
+}
+
+/* Landscape for mobile phones */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 12%;
+    padding: 0px 11px 11px 11px;
+  }
+
+  .header {
+    margin: auto;
+  }
+
+  .main-image img {
+    width: 40%;
+  }
+
+  .button-left {
+    width: 49%;
+  }
+
+  .button-right {
+    width: 49%;
+  }
+
+  .slick-container {
+    height: 88%;
+  }
+}
+
+/* Landscape for tablets  */
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  .main-image img {
+    width: 55%;
   }
 }

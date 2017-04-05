@@ -124,3 +124,19 @@ footer {
     height: 50%;
   }
 }
+
+
+/* Landscape */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 14%;
+  }
+
+  .bottom-container {
+    height: 41%;
+  }
+
+  .header {
+    margin: 7px;
+  }
+}
