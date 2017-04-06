@@ -399,7 +399,7 @@
         width: 60%;
         left: 0px;
         right: 0px;
-        bottom: 12%;
+        bottom: 30px;
         margin: 0px auto;
       }
 
@@ -416,6 +416,7 @@
       .header {
         font-family: Avenir-Medium;
         letter-spacing: -0.02em;
+        margin: auto;
       }
 
       .message {
@@ -541,7 +542,7 @@
         background: #425271;
       }
 
-      /* Tablets (iPads, etc) */
+      /* Tablets (iPads, etc) and Desktops */
       @media only screen and (min-device-width: 768px) {
         body {
           background-color: rgba(0,0,0,0.8);
@@ -561,6 +562,8 @@
           right: 0px;
           bottom: 0px;
           margin: auto;
+          min-width: 420px;
+          min-height: 380px;
         }
 
         .button-close {
@@ -570,6 +573,37 @@
 
         .button-close img {
           width: 15px;
+        }
+      }
+
+      /* Landscape for mobile phones */
+      @media only screen and (orientation: landscape) {
+        footer {
+          height: 12%;
+          padding: 0px 11px 11px 11px;
+        }
+
+        .main-image img {
+          width: 40%;
+        }
+
+        .button-left {
+          width: 49%;
+        }
+
+        .button-right {
+          width: 49%;
+        }
+
+        .slick-container {
+          height: 88%;
+        }
+      }
+
+      /* Landscape for tablets  */
+      @media only screen and (min-device-width: 768px) and (orientation: landscape) {
+        .main-image img {
+          width: 55%;
         }
       }
     </style>
