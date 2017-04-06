@@ -353,7 +353,7 @@
       }
 
       footer {
-        font-family: Avenir-Black;
+        font-family: Avenir-Black, sans-serif;
         font-size: 15px;
         letter-spacing: 0.02em;
         width: 100%;
@@ -414,13 +414,13 @@
       }
 
       .header {
-        font-family: Avenir-Medium;
+        font-family: Avenir-Medium, sans-serif;
         letter-spacing: -0.02em;
         margin: auto;
       }
 
       .message {
-        font-family: Avenir-Book;
+        font-family: Avenir-Book, sans-serif;
         font-size: 15px;
         line-height: 17px;
       }
@@ -564,6 +564,7 @@
           margin: auto;
           min-width: 420px;
           min-height: 380px;
+          max-width: 600px;
         }
 
         .button-close {
@@ -636,9 +637,9 @@
     <div class="outer ab-centering-div">
       <div class="inner">
         <div class="button-close">
-          <!-- This is the close button. Change #425271 to another color to change its color -->
           <a href="#/" onclick="appboyBridge.closeMessage()">
-            <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><defs><style>.x-button-fill { fill: #425271; fill-rule: evenodd; }</style></defs><path id="Close_Icon" data-name="Close Icon" class="x-button-fill" d="M5179.55,608l-2.5,2.512,17.51,17.536-17.43,17.44,2.5,2.512,17.43-17.456L5214.48,648l2.5-2.512-17.43-17.44,17.51-17.536-2.5-2.512-17.5,17.536Z" transform="translate(-5177.06 -608)"/></svg>' width="20px;"/>
+            <!-- This is the close button image. Base64 decode it, change #425271 to another color, and base64 encode it again to change its color -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZGVmcz48c3R5bGU+LngtYnV0dG9uLWZpbGwgeyBmaWxsOiAjNDI1MjcxOyBmaWxsLXJ1bGU6IGV2ZW5vZGQ7IH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iQ2xvc2VfSWNvbiIgZGF0YS1uYW1lPSJDbG9zZSBJY29uIiBjbGFzcz0ieC1idXR0b24tZmlsbCIgZD0iTTUxNzkuNTUsNjA4bC0yLjUsMi41MTIsMTcuNTEsMTcuNTM2LTE3LjQzLDE3LjQ0LDIuNSwyLjUxMiwxNy40My0xNy40NTZMNTIxNC40OCw2NDhsMi41LTIuNTEyLTE3LjQzLTE3LjQ0LDE3LjUxLTE3LjUzNi0yLjUtMi41MTItMTcuNSwxNy41MzZaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTE3Ny4wNiAtNjA4KSIvPjwvc3ZnPg==" width="20px;"/>
           </a>
         </div>
 

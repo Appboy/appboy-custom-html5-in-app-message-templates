@@ -24,7 +24,7 @@ footer {
   background-color: #FFFFFF;
   border-radius: 0px 0px 10px 10px;
   position: absolute;
-  font-family: Avenir-Black;
+  font-family: Avenir-Black, sans-serif;
   font-size: 15px;
   letter-spacing: 0.02em;
   width: 100%;
@@ -72,12 +72,12 @@ footer {
 }
 
 .header {
-  font-family: Avenir-Medium;
+  font-family: Avenir-Medium, sans-serif;
   letter-spacing: -0.02em;
 }
 
 .message {
-  font-family: Avenir-Book;
+  font-family: Avenir-Book, sans-serif;
   font-size: 15px;
   line-height: 17px;
 }
