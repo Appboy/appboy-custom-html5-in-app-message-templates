@@ -196,3 +196,48 @@ footer {
     height: 50%;
   }
 }
+
+/* Landscape */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 14%;
+  }
+
+  .modal {
+    height: 88%;
+  }
+
+  .header {
+    margin: 10px;
+  }
+
+  .button-left {
+    width: 49%;
+  }
+
+  .button-right {
+    width: 49%;
+  }
+
+  .slick-container {
+    height: 86%;
+  }
+
+  .slick-dots {
+    bottom: 6px;
+  }
+}
+
+/* Landscape for Smaller Devices */
+@media only screen and (max-device-width: 568px) and (orientation: landscape) {
+  .header {
+    margin: 3px;
+  }
+}
+
+/* Landscape for Tablets  */
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  .modal {
+    height: 60%;
+  }
+}
