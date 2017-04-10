@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <script type="text/javascript">
+      EMAIL_ADDRESS_REGEX = new RegExp("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])");
+
+      function validateEmail(emailField) {
+        var email = emailField.value;
+        var inputs, i;
+        if (email.match(EMAIL_ADDRESS_REGEX) == null) {
+          document.getElementsByClassName('ab-email-validation-error')[0].style.display = 'inline-block';
+          inputs = document.getElementsByTagName('input');
+          for (i = 0; i < inputs.length; i++) {
+            inputs[i].className = inputs[i].className + ' with-error';
+          }
+
+          emailField.onkeyup = function() {
+            validateEmail(this);
+          };
+
+          return false;
+        } else {
+          document.getElementsByClassName('ab-email-validation-error')[0].style.display = 'none';
+          inputs = document.getElementsByTagName('input');
+          for (i = 0; i < inputs.length; i++) {
+            inputs[i].className = inputs[i].className.replace(/with-error/g, '');
+          }
+          return true;
+        }
+      }
+    </script>
+    <style type="text/css">
+      .ab-email-capture {
+        margin: 0;
+      }
+      .ab-email-capture .ab-in-app-message.ab-modal {
+        max-height: none;
+      }
+      .ab-email-capture .ab-in-app-message.ab-modal .ab-message-buttons ~ .ab-message-text {
+        margin-bottom: 140px;
+      }
+      .ab-email-capture .ab-in-app-message.ab-modal .ab-message-buttons ~ .ab-message-text.with-explanatory-link {
+        margin-bottom: 166px;
+      }
+      .ab-email-capture .ab-in-app-message.ab-modal .ab-html-close-button {
+        right: 8px;
+        top: 6px;
+      }
+      .ab-email-capture .ab-in-app-message .ab-email-capture-input {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: normal;
+        text-align: center;
+        height: 40px;
+        width: 100%;
+      }
+      .ab-email-capture .ab-in-app-message .ab-explanatory-link {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+      .ab-email-capture .ab-email-capture-input.with-error {
+        border-color: #db1f24;
+      }
+      .ab-email-capture .ab-email-capture-input.with-error:focus {
+        outline-color: #db1f24;
+        border-color: #db1f24;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
+      .ab-email-capture span.ab-email-validation-error {
+        color: #db1f24;
+        margin-top: 57px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 12px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="ab-in-app-message ab-html-message ab-email-capture">
+    <div class="ab-centering-div ab-modal">
+      <div class="ab-in-app-message ab-show ab-modal ab-effect-modal">
+        <div class="ab-message-buttons">
+          <div class="ab-mask"></div>
+          <div class="ab-background" style="background-color: rgb(247, 247, 247);"></div>
+          <input class="ab-email-capture-input" type="text" placeholder="Enter your email address" />
+          <span class="ab-email-validation-error">Please enter a valid email address</span>
+          <button id="0" class="ab-message-button" type="button" style="background-color: rgb(27, 120, 207);"
+                  onclick="var emailField = document.getElementsByClassName('ab-email-capture-input')[0];
+                           if (!validateEmail(emailField)) {
+                             return false;
+                           }
+
+                           appboyBridge.getUser().setEmail(emailField.value);
+                           appboyBridge.requestImmediateDataFlush();
+                           appboyBridge.closeMessage();">
+            <span style="color: rgb(255, 255, 255);">Submit</span>
+          </button>
+        </div>
+        <div class="ab-mask"></div>
+        <div class="ab-background" style="background-color: rgb(247, 247, 247);"></div>
+        <span class="ab-close-button ab-html-close-button" onclick="appboyBridge.closeMessage()">×</span>
+        <div class="ab-message-text center-aligned"><!-- no whitespace
+          --><span class="ab-message-header center-aligned">YOUR HEADER HERE</span><!-- no whitespace
+          --><span>YOUR MESSAGE HERE</span><!-- no whitespace
+        --></div>
+      </div>
+    </div>
+    <div class="ab-page-blocker ab-show" onclick="appboyBridge.closeMessage()" style="background-color: rgba(51, 51, 51, 0.75)"></div>
+  </body>
+</html>

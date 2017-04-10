@@ -21,8 +21,8 @@ a {
 }
 
 footer {
-  background-color: #EFEFEF;
-  font-family: Avenir-Black;
+  background-color: #FFFFFF;
+  font-family: Avenir-Black, sans-serif;
   font-size: 15px;
   letter-spacing: 0.02em;
   width: 100%;
@@ -31,7 +31,6 @@ footer {
 }
 
 .outer {
-  background-color: #FFFFFF;
   top: 0px;
   bottom: 0px;
   left: 0px;
@@ -41,11 +40,11 @@ footer {
 
 .top-container {
   /* Change the background-image url to a image of your choice */
-  background-image: url('');;
+  background-image: url('background-dark-blue.png');
   position: relative;
   background-size: cover;
   width: 100%;
-  height: 57%;
+  height: 50%;
   padding: 22px;
 }
 
@@ -58,11 +57,12 @@ footer {
 
 .main-image {
   overflow: hidden;
-  position: relative;
-  width: 50%;
-  height: 50%;
-  bottom: 0px;
-  margin: 12% auto 0% auto;
+  position: absolute;
+  width: 60%;
+  left: 0px;
+  right: 0px;
+  bottom: 30px;
+  margin: 0px auto;
 }
 
 .main-image img {
@@ -70,22 +70,21 @@ footer {
 }
 
 .header {
-  font-family: Avenir-Medium;
+  font-family: Avenir-Medium, sans-serif;
   letter-spacing: -0.02em;
 }
 
 .message {
-  font-family: Avenir-Book;
+  font-family: Avenir-Book, sans-serif;
   font-size: 15px;
   line-height: 17px;
 }
 
 .bottom-container {
-  background-color: #EFEFEF;
+  background-color: #FFFFFF;
   overflow: hidden;
-  position: relative;
   width: 100%;
-  height: 33%;
+  height: 40%;
   padding: 0px 22px 22px 22px;
 }
 
@@ -108,37 +107,11 @@ footer {
   vertical-align: middle;
 }
 
-.rate-the-stars {
-  color: #222222;
-  font-size: 13px;
-  position: absolute;
-  left: 0px;
-  top: 30px;
-  right: 0px;
-  bottom: 0px;
-  margin: auto;
-}
-
-.stars {
-  font-size: 40px;
-  color: #D8D8D8;
-  letter-spacing: 0.13em;
-  display: inline;
-}
-
-.star {
-  color: #F3D02A
-}
-
 /* Smaller Devices (iPhone 5, etc) */
 @media only screen and (max-device-width: 568px) {
   .message {
     font-size: 13px;
     line-height: 15px;
-  }
-
-  .rate-the-stars {
-    font-size: 11px;
   }
 }
 
@@ -149,12 +122,11 @@ footer {
   }
 
   footer {
-    padding: 0px 12px 12px 12px;
     border-radius: 0px 0px 10px 10px;
+    padding: 0px 12px 12px 12px;
   }
 
   .outer {
-    border-radius: 10px;
     width: 45%;
     height: 50%;
     position: absolute;
@@ -163,6 +135,10 @@ footer {
     right: 0px;
     bottom: 0px;
     margin: auto;
+  }
+
+  .top-container {
+    border-radius: 10px 10px 0px 0px;
   }
 
   .button-close {
@@ -182,16 +158,12 @@ footer {
     padding: 0px 11px 11px 11px;
   }
 
-  .main-image {
-    margin: 0px auto;
+  .main-image img {
+    width: 45%;
   }
 
-  .bottom-container {
-    height: 31%;
-  }
-
-  .rate-the-stars {
-    top: 20px;
+  .top-container {
+    height: 48%;
   }
 }
 
