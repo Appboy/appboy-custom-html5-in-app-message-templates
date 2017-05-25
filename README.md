@@ -23,8 +23,8 @@ Choose a template you would like to base your customized in-app message off of. 
   * [Modal with pagination](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/native/modal-pagination)
   * [Modal with rating](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/native/modal-rating)
 * Web Messages (Browsers Only)
-  * [Fullscreen with pagination](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/native/fullscreen-pagination)
-  * [Email Capture](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/native/email-capture)
+  * [Fullscreen with pagination](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/web/fullscreen-pagination)
+  * [Email Capture](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/web/email-capture)
 
 # Previewing
 
