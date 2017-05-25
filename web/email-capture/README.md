@@ -1,4 +1,4 @@
-# Fullscreen
+# Email Capture
 <img src="/_images/web-email-capture.png" width="250">
 
 This template provides an email capture in-app message, similar to the email capture type available on the Appboy dashboard, but provided as raw HTML to allow for deeper customization.
