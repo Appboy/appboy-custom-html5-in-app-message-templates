@@ -3,7 +3,7 @@ HTML5 IAM Templates
 
 # Overview
 
-Appboy provides the ability to create campaigns with fully customizable In-App Messages using HTML5.  We have provided a set of templates and some documentation to get you through the process of creating a customized in-app message.
+Braze provides the ability to create campaigns with fully customizable In-App Messages using HTML5.  We have provided a set of templates and some documentation to get you through the process of creating a customized in-app message.
 
 # Getting Started
 
@@ -13,7 +13,7 @@ To get started, clone this repo into any directory of your choice by clicking th
 
 # Templates
 
-Choose a template you would like to base your customized in-app message off of.  Edit the files within the folder until you achieve the desired result.  While developing, follow the instructions under "Previewing" and "Testing" to continuously view your updated customized template.
+Choose a template you would like to base your customized in-app message off of. Edit the files within the folder until you achieve the desired result.  While developing, follow the instructions under "Previewing" and "Testing" to continuously view your updated customized template.
 
 * Native Messages (Apps Only)
   * [Fullscreen](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/native/fullscreen-main)
@@ -28,7 +28,7 @@ Choose a template you would like to base your customized in-app message off of. 
 
 # Previewing
 
-If you would like to preview your customized template using Google Chrome Dev Tools before uploading it to an Appboy campaign:
+If you would like to preview your customized template using Google Chrome Dev Tools before uploading it to a Braze campaign:
 
 1. Open template.html in a Google Chrome tab.
 2. Open up Chrome Dev Tools in that Google Chrome tab (Mac: ctrl + option + i; Windows: F12, ctrl + shift + i).
@@ -38,22 +38,22 @@ If you would like to preview your customized template using Google Chrome Dev To
 4. Toggle through different devices to ensure your template will display your message correctly.
 <img src="/_images/toggle-device.png" width="400">
 
-# Uploading Customized Templates to Appboy
+# Uploading Customized Templates to Braze
 
-When you've finished customizing and testing your template, follow these instructions to upload your template to an Appboy campaign:
+When you've finished customizing and testing your template, follow these instructions to upload your template to a Braze campaign:
 
-1. Compress all of the necessary files (css, js, and image files, excluding template.html and README.md) into a zip file.  Since Appboy's Custom HTML IAM campaigns currently do not support zip files that contain folders, be sure to compress only the files, and not a folder of the files.
+1. Compress all of the necessary files (css, js, and image files, excluding template.html and README.md) into a zip file.  Since Braze's Custom HTML IAM campaigns currently do not support zip files that contain folders, be sure to compress only the files, and not a folder of the files.
 
 <img src="/_images/compress-zip.png" width="400">
 
-2. In Appboy's dashboard, open up and create/edit your IAM campaign.  Choose "Custom HTML" as your IAM type.  Copy and paste the contents of template.html in the html box and upload your zip file.
+2. In Braze's dashboard, open up and create/edit your IAM campaign.  Choose "Custom HTML" as your IAM type.  Copy and paste the contents of template.html in the html box and upload your zip file.
 
 <img src="/_images/create-custom-html-iam.png" width="600">
 
 # Testing
 
-If you would like to test your customized template on a mobile device by using a test Appboy campaign, follow the instructions in [Appboy Academy](https://www.appboy.com/academy/Dashboard_Features/#sending-a-test-in-app-message).  This testing procedure is available if you are using our updated in-app messaging format. If the UI in this link is not available in your dashboard yet, please contact success@appboy.com to enable this new feature and in the meantime, test your message by sending to a [test segment](https://www.appboy.com/academy/Dashboard_Features/#creating-a-designated-test-segment).
+If you would like to test your customized template on a mobile device by using a test Braze campaign, follow the instructions in [Braze Academy](https://www.braze.com/academy/Dashboard_Features/#sending-a-test-in-app-message).  This testing procedure is available if you are using our updated in-app messaging format. If the UI in this link is not available in your dashboard yet, please contact success@braze.com to enable this new feature and in the meantime, test your message by sending to a [test segment](https://www.braze.com/academy/Dashboard_Features/#creating-a-designated-test-segment).
 
-# Communicating with Appboy
+# Communicating with Braze
 
-Custom HTML in-app messages support syntax for communicating with Appboy - enabling rich support for actions such as logging a Custom Event, or opening the Appboy News Feed.  For more information on doing this from within an app, [click here](https://www.appboy.com/academy/Best_Practices/#native-html-messages), and for information on doing this on the web, [click here](https://www.appboy.com/academy/Best_Practices/#web-html-messages).
+Custom HTML in-app messages support syntax for communicating with Braze - enabling rich support for actions such as logging a Custom Event, or opening the Braze News Feed.  For more information on doing this from within an app, [click here](https://www.braze.com/academy/Best_Practices/#native-html-messages), and for information on doing this on the web, [click here](https://www.braze.com/academy/Best_Practices/#web-html-messages).
