@@ -1,4 +1,4 @@
-![Braze Logo](https://github.com/Appboy/aappboy-custom-html5-in-app-message-templates/blob/master/braze-logo.png)
+![Braze Logo](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates/blob/master/braze-logo.png)
 
 HTML5 IAM Templates
 ==========
