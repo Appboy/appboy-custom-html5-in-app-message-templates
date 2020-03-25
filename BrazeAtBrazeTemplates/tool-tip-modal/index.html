@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Tip Modal</title>
+  <style>
+      /* fonts */
+      @font-face {
+          font-family: 'Sailec Bold';
+          src: url('https://fast.fonts.net/dv2/14/27c46a82-5633-4ad2-b344-5a8a72cbe74f.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc')
+          format('woff2');
+      }
+
+      @font-face {
+          font-family: 'Sailec Normal';
+          src: url('https://fast.fonts.net/dv2/14/800335be-e4e3-47e0-9306-06d3cd915d27.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc')
+          format('woff2');
+      }
+
+      :root {
+          --bold-font-stack: 'Sailec Bold', helvetica, arial, sans-serif;
+          --normal-font-stack: 'Sailec Normal', helvetica, arial, sans-serif;
+          --accent-color: #0099AE;
+          --text-color: #101B24;
+      }
+
+      /* Box sizing rules */
+      *,
+      *::before,
+      *::after {
+          box-sizing: border-box;
+      }
+
+      /* Remove default padding */
+      ul,
+      ol {
+          padding: 0;
+      }
+
+      /* Remove default margin */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      ul,
+      ol,
+      li,
+      figure,
+      figcaption,
+      blockquote,
+      dl,
+      dd {
+          margin: 0;
+      }
+
+      /* Set core body defaults */
+      body {
+          height: 100vh;
+          width: 100vw;
+          color: var(--text-color);
+          line-height: 1.5;
+          color: #101B24;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Remove list styles on ul, ol elements with a class attribute */
+      ul[class],
+      ol[class] {
+          list-style: none;
+      }
+
+      /* A elements that don't have a class get default styles */
+      a:not([class]) {
+          text-decoration-skip-ink: auto;
+      }
+
+      /* Make images easier to work with */
+      img {
+          max-width: 100%;
+          display: block;
+      }
+
+      /* Natural flow and rhythm in articles by default */
+      article > * + * {
+          margin-top: 1em;
+      }
+
+      /* Inherit fonts for inputs and buttons */
+      input,
+      button,
+      textarea,
+      select {
+          font: inherit;
+      }
+
+      a {
+        color: #0099AE;
+      }
+
+      .tool-tip {
+        display: flex;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 370px;
+        height: 120px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 3px;
+      }
+
+      .tool-tip__image {
+          height: 120px;
+          width: 120px;
+          flex-basis: 120px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+      }
+
+      .tool-tip__cross {
+          position: absolute;
+          top: 12px;
+          right: 12px;
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+      }
+
+      .tool-tip__cross,
+      .tool-tip__cross svg {
+          height: 16px;
+          width: 16px;
+      }
+
+      .tool-tip__text {
+          width: 250px;
+          flex-basis: 250px;
+          padding: 12px 14px;
+      }
+
+      .tool-tip__title {
+          margin-bottom: 4px;
+          font-size: 19px;
+          font-family: var(--bold-font-stack);
+          line-height: 26px;
+      }
+
+      p {
+          padding-right: 20px;
+          font-size: 14px;
+          line-height: 20px;
+          font-family: var(--normal-font-stack);
+      }
+
+      a {
+          text-decoration: none;
+      }
+  </style>
+</head>
+<body onclick="appboyBridge.closeMessage()">
+  <div class="tool-tip">
+    <!-- Link to image to be inserted inside url() -->
+    <div class="tool-tip__image" style="background-image: url('https://via.placeholder.com/150C/eee')">
+    </div>
+    <div class="tool-tip__text">
+      <button class="tool-tip__cross" onclick="appboyBridge.closeMessage()" type="button">
+        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.14128 2.60452L19.5705 19.3955" stroke="#5E6C75" stroke-width="3.8" />
+          <path d="M19.3001 2.34807L3.41199 19.6519" stroke="#5E6C75" stroke-width="3.8" />
+        </svg>
+      </button>
+      <h3 class="tool-tip__title">New Features</h3>
+      <p>
+        <span>Tap the settings gear of a campaign to duplicate any campaign.</span>
+        <!-- Link to be inserted below -->
+        <a href="">Learn more.</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
