@@ -1,0 +1,142 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-family: Avenir-Book, sans-serif;
+  color: #222222;
+  text-align: center;
+  margin: 0px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+footer {
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
+  position: absolute;
+  font-family: Avenir-Black, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 12%;
+  padding: 0px 12px 12px 12px;
+}
+
+.outer {
+  /* To change the background color of the modal, change the rgba configuration.  The last parameter (0.8) configures the opacity. */
+  background-color: rgba(0,0,0,0.8);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.modal {
+  border-radius: 10px;
+  position: absolute;
+  width: 85%;
+  height: 70%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+}
+
+.top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 45%;
+  padding: 22px;
+}
+
+.button-close {
+  position: absolute;
+  z-index: 99;
+  right: 12px;
+  top: 12px;
+}
+
+.header {
+  font-family: Avenir-Medium, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  font-family: Avenir-Book, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.bottom-container {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  width: 100%;
+  height: 43%;
+  padding: 0px 22px 22px 22px;
+}
+
+.button-center {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.button-center p {
+  position: relative;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* Smaller Devices (iPhone 5, etc) */
+@media only screen and (max-device-width: 568px) {
+  .message {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+/* Tablets (iPads, etc) */
+@media only screen and (min-device-width: 768px) {
+  .modal {
+    width: 45%;
+    height: 50%;
+  }
+}
+
+
+/* Landscape */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 14%;
+  }
+
+  .bottom-container {
+    height: 41%;
+  }
+
+  .header {
+    margin: 7px;
+  }
+}

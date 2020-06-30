@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Braze Survey Modal</title>
+    <style>
+        /* fonts */
+        @font-face {
+            font-family: 'Sailec Bold';
+            src: url('https://fast.fonts.net/dv2/14/27c46a82-5633-4ad2-b344-5a8a72cbe74f.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc')
+            format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Sailec Normal';
+            src: url('https://fast.fonts.net/dv2/14/800335be-e4e3-47e0-9306-06d3cd915d27.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc')
+            format('woff2');
+        }
+
+        :root {
+            --bold-font-stack: 'Sailec Bold', helvetica, arial, sans-serif;
+            --normal-font-stack: 'Sailec Normal', helvetica, arial, sans-serif;
+            --accent-color: #0099AE;
+            --text-color: #101B24;
+        }
+
+        /* Box sizing rules */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Remove default padding */
+        ul,
+        ol {
+            padding: 0;
+        }
+
+        /* Remove default margin */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul,
+        ol,
+        li,
+        figure,
+        figcaption,
+        blockquote,
+        dl,
+        dd {
+            margin: 0;
+        }
+
+        /* Set core body defaults */
+        body {
+            min-height: 100vh;
+            scroll-behavior: smooth;
+            text-rendering: optimizeSpeed;
+            color: var(--text-color);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Remove list styles on ul, ol elements with a class attribute */
+        ul[class],
+        ol[class] {
+            list-style: none;
+        }
+
+        /* A elements that don't have a class get default styles */
+        a:not([class]) {
+            text-decoration-skip-ink: auto;
+        }
+
+        /* Make images easier to work with */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Natural flow and rhythm in articles by default */
+        article > * + * {
+            margin-top: 1em;
+        }
+
+        /* Inherit fonts for inputs and buttons */
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        .overlay {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(46, 60, 71, 0.7);
+            z-index: 99999;
+        }
+
+        .modal {
+            position: relative;
+            max-width: 450px;
+            flex-basis: 450px;
+            margin: auto;
+            border-radius: 3px;
+            padding: 64px 32px 32px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .modal__cross {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .modal__cross,
+        .modal__cross svg {
+            height: 22px;
+            width: 22px;
+        }
+
+        .modal__title {
+            margin-bottom: 12px;
+            font-family: var(--bold-font-stack);
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        .modal__text {
+            margin-bottom: 24px;
+            font-family: var(--normal-font-stack);
+            font-size: 14px;
+            line-height: 21px;
+        }
+
+        .modal__survey-list {
+          margin-bottom: 32px;
+        }
+
+        .modal__survey-list-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border: 1px solid #A8B3B8;
+            cursor: pointer;
+        }
+
+        .modal__survey-list-item + .modal__survey-list-item {
+            margin-top: 8px;
+        }
+
+        .modal__input {
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 0;
+          width: 0;
+        }
+
+        .modal__input:checked + .modal__label:before {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .modal__input:checked + .modal__label + .modal__tick {
+          display: block;
+        }
+
+        .modal__label {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 8px;
+            font-family: var(--normal-font-stack);
+            font-size: 14px;
+            line-height: 21px;
+            cursor: pointer;
+        }
+
+        .modal__label:before {
+            content: "";
+            display: block;
+            height: 32px;
+            width: 32px;
+            border: 1px solid #A8B3B8;
+            border-radius: 3px;
+            margin-right: 20px;
+        }
+
+        .modal__tick {
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 18px;
+            width: 13px;
+            height: 10px;
+        }
+
+        .modal__button-wrap {
+            display: flex;
+            justify-content: flex-end;
+            border: none;
+        }
+
+        .modal__button {
+            width: 140px;
+            height: 40px;
+            background-color: var(--accent-color);
+            color: rgb(255, 255, 255);
+            font-family: var(--bold-font-stack);
+            font-size: 14px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+        }
+
+        .modal__button span {
+            position: relative;
+            top: -2px;
+        }
+
+        .hide {
+          display: none;
+        }
+
+        .modal__error-message {
+          display: none;
+          margin-top: 10px;
+          color: rgb(255, 58, 93);
+          font-family: var(--normal-font-stack);
+          font-size: 12px;
+        }
+
+        .modal__error-message.show {
+          display: inline-block;
+        }
+    </style>
+</head>
+<body>
+  <!-- ENTER THE NAME OF YOUR CUSTOM ATTRIBUTE HERE -->
+  <!-- ENTER DISABLED TO BLOCK THE FUNCTION -->
+  <p id="custom-attribute" class="hide">DISABLED</p>
+
+  <div class="overlay">
+    <div class="modal" id="js-form">
+      <button class="modal__cross" onclick="appboyBridge.closeMessage()" type="button">
+        <svg  width="23" height="22" viewBox="0 0 23 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.14128 2.60452L19.5705 19.3955" stroke="#5E6C75" stroke-width="3.8" />
+          <path d="M19.3001 2.34807L3.41199 19.6519" stroke="#5E6C75" stroke-width="3.8" />
+        </svg>
+      </button>
+      <h1 class="modal__title">Survey Headline</h1>
+      <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <ul class="modal__survey-list">
+        <li class="modal__survey-list-item">
+          <input value="option-one" class="modal__input" id="option-one" name="survey-answer" type="radio">
+          <!-- Add option label text below -->
+          <label class="modal__label" for="option-one">Lorem ipsum dolor sit amet</label>
+          <svg class="modal__tick" width="14" height="10" viewBox="0 0 14 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.22412L5.1709 8.41309L12.4143 1" stroke="white" stroke-width="2" />
+          </svg>
+        </li>
+        <li class="modal__survey-list-item">
+          <input value="option-two" class="modal__input" id="option-two" name="survey-answer" type="radio">
+          <!-- Add option label text below -->
+          <label class="modal__label" for="option-two">Consectetur adipiscing elit</label>
+          <svg class="modal__tick" width="14" height="10" viewBox="0 0 14 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.22412L5.1709 8.41309L12.4143 1" stroke="white" stroke-width="2" />
+          </svg>
+        </li>
+        <li class="modal__survey-list-item">
+          <input value="option-three" class="modal__input" id="option-three" name="survey-answer" type="radio">
+          <!-- Add option label text below -->
+          <label class="modal__label" for="option-three">Sed do eiusmod tempor incididunt</label>
+          <svg class="modal__tick" width="14" height="10" viewBox="0 0 14 10" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 4.22412L5.1709 8.41309L12.4143 1" stroke="white" stroke-width="2" />
+          </svg>
+        </li>
+        <span class="modal__error-message" id="js-error-message">Please check a box to submit.</span>
+      </ul>
+      <div class="modal__button-wrap">
+        <button class="modal__button" id="js-submit-button" type="button">
+          <span>Submit</span>
+        </button>
+      </div>
+    </form>
+  </div>
+  <script>
+      const errorMessage = document.getElementById('js-error-message');
+      const form = document.getElementById('js-form');
+      const submitButton = document.getElementById('js-submit-button');
+      const customAttribute = document.getElementById('custom-attribute');
+      const customAttributeName = customAttribute.innerText.toLowerCase();
+
+      function submitData() {
+          let selectedOption;
+          const checkboxes = Array.from(document.getElementsByClassName('modal__input'));
+          const optionOneValue = document.getElementById('option-one').checked;
+          const optionTwoValue = document.getElementById('option-two').checked;
+          const optionThreeValue = document.getElementById('option-three').checked;
+
+          if (!optionOneValue && !optionTwoValue && !optionThreeValue) {
+            return errorMessage.classList.add('show');
+          }
+
+          for (const checkbox in checkboxes) {
+              if (checkboxes[checkbox].checked) {
+                selectedOption = checkboxes[checkbox].value;
+              }
+          }
+
+          if (customAttributeName !== 'disabled') {
+            appboyBridge.getUser().setCustomUserAttribute(customAttributeName, selectedOption);
+            appboyBridge.closeMessage();
+          } else {
+            appboyBridge.closeMessage();
+          }
+      }
+
+      submitButton.addEventListener('click', submitData);
+  </script>
+</body>
+</html>

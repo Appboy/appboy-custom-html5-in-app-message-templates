@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* fonts */
+        @font-face {
+            font-family: 'Sailec Bold';
+            src: url('https://fast.fonts.net/dv2/14/27c46a82-5633-4ad2-b344-5a8a72cbe74f.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Sailec Normal';
+            src: url('https://fast.fonts.net/dv2/14/800335be-e4e3-47e0-9306-06d3cd915d27.woff2?d44f19a684109620e4841579af90e81815eac57c3142f7b7e65da4f4a26d35fbc393ff2afe1d1d96055662c0c40bb97945a18a6584f9cc63f9f5950bd2e10256841b2e13c4fb5b123262dea024331ee4b75ef95558e0aee11d52d91de14d7ebc5bf05da7da4a7a0dae2df800&projectId=34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc') format('woff2');
+        }
+
+        :root {
+            --header-font-stack: 'Sailec Bold', helvetica, arial, sans-serif;
+            --body-font-stack: 'Sailec Normal', helvetica, arial, sans-serif;
+        }
+
+        /* Box sizing rules */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        /* Remove default padding */
+        ul[class],
+        ol[class] {
+            padding: 0;
+        }
+
+        /* Remove default margin */
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        ul[class],
+        ol[class],
+        li,
+        figure,
+        figcaption,
+        blockquote,
+        dl,
+        dd {
+            margin: 0;
+        }
+
+        /* Set core body defaults */
+        body {
+            min-height: 100vh;
+            scroll-behavior: smooth;
+            text-rendering: optimizeSpeed;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Remove list styles on ul, ol elements with a class attribute */
+        ul[class],
+        ol[class] {
+            list-style: none;
+        }
+
+        /* A elements that don't have a class get default styles */
+        a:not([class]) {
+            text-decoration-skip-ink: auto;
+        }
+
+        /* Make images easier to work with */
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Natural flow and rhythm in articles by default */
+        article > * + * {
+            margin-top: 1em;
+        }
+
+        /* Inherit fonts for inputs and buttons */
+        input,
+        button,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 99999;
+        }
+
+        .modal {
+            display: flex;
+            height: 450px;
+            max-width: 900px;
+            flex-basis: 900px;
+            margin: auto;
+        }
+
+        .modal__image {
+            height: 450px;
+            max-width: 450px;
+            flex-basis: 450px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .modal__content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 450px;
+            max-width: 450px;
+            flex-basis: 450px;
+            padding: 60px 40px 40px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .modal__cross {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            height: 34px;
+            width: 34px;
+        }
+
+        .modal__title {
+            width: 300px;
+            margin-bottom: 10px;
+            font-size: 36px;
+            line-height: 1.2;
+            color: #101B24;
+            font-family: var(--header-font-stack);
+        }
+
+        .modal__sub-title {
+            margin-bottom: 10px;
+            font-family: var(--header-font-stack);
+            font-size: 16px;
+            color: #76848C;
+        }
+
+        .modal__text {
+            font-family: var(--body-font-stack);
+            font-size: 14px;
+            color: #101B24;
+            line-height: 1.5;
+        }
+
+        .modal__button-wrap {
+            margin-top: auto;
+            margin-left: auto;
+        }
+
+        .modal__btn {
+            font-family: var(--header-font-stack);
+            font-weight: 700;
+        }
+
+        .modal__btn--main {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background-color: #3accdd;
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+        }
+
+        .modal__btn--secondary {
+            padding: 8px 16px;
+            border: 1px solid #A8B3B8;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="overlay">
+    <div class="modal">
+        <!-- Replace url with link to image -->
+        <div class="modal__image" style="background-image: url('https://via.placeholder.com/450')"></div>
+        <div class="modal__content">
+            <button class="modal__cross" onclick="appboyBridge.closeMessage()" type="button">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.4175 16.8419L8.51467 10.9391C7.8452 10.2696 7.8452 9.18422 8.51467 8.51475C9.18414 7.84528 10.2696 7.84528 10.939 8.51475L16.8418 14.4176L22.7446 8.51475C23.4141 7.84528 24.4995 7.84528 25.169 8.51475C25.8385 9.18422 25.8385 10.2696 25.169 10.9391L19.2662 16.8419L25.169 22.7447C25.8385 23.4142 25.8385 24.4996 25.169 25.1691C24.4995 25.8386 23.4141 25.8386 22.7446 25.1691L16.8418 19.2663L10.939 25.1691C10.2696 25.8386 9.18414 25.8386 8.51467 25.1691C7.8452 24.4996 7.8452 23.4142 8.51467 22.7447L14.4175 16.8419Z" fill="#A8B3B8"/>
+                </svg>
+            </button>
+            <h1 class="modal__title">This is where the modal title goes</h1>
+            <h2 class="modal__sub-title">Sub head maybe here that is not too long</h2>
+            <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="modal__button-wrap">
+                <button class="modal__btn modal__btn--secondary" type="button" target="_blank">Secondary Action</button>
+                <button class="modal__btn modal__btn--main" type="button" target="_blank">Primary Action</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

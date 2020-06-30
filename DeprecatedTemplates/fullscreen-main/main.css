@@ -1,0 +1,175 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-family: Avenir-Book, sans-serif;
+  color: #222222;
+  text-align: center;
+  margin: 0px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+footer {
+  background-color: #FFFFFF;
+  font-family: Avenir-Black, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 10%;
+  padding: 0px 22px 22px 22px;
+}
+
+.outer {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+.top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  padding: 22px;
+}
+
+.button-close {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  z-index: 99;
+}
+
+.main-image {
+  overflow: hidden;
+  position: absolute;
+  width: 60%;
+  left: 0px;
+  right: 0px;
+  bottom: 30px;
+  margin: 0px auto;
+}
+
+.main-image img {
+  border-radius: 15px;
+}
+
+.header {
+  font-family: Avenir-Medium, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  font-family: Avenir-Book, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.bottom-container {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  width: 100%;
+  height: 40%;
+  padding: 0px 22px 22px 22px;
+}
+
+.button-center {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.button-center p {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Smaller Devices (iPhone 5, etc) */
+@media only screen and (max-device-width: 568px) {
+  .message {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+/* Tablets (iPads, etc) */
+@media only screen and (min-device-width: 768px) {
+  body {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  footer {
+    border-radius: 0px 0px 10px 10px;
+    padding: 0px 12px 12px 12px;
+  }
+
+  .outer {
+    width: 45%;
+    height: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+  }
+
+  .top-container {
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .button-close {
+    right: 12px;
+    top: 12px;
+  }
+
+  .button-close img {
+    width: 15px;
+  }
+}
+
+/* Landscape for mobile phones */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 12%;
+    padding: 0px 11px 11px 11px;
+  }
+
+  .main-image img {
+    width: 45%;
+  }
+
+  .top-container {
+    height: 48%;
+  }
+}
+
+/* Landscape for tablets  */
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  .main-image img {
+    width: 65%;
+  }
+}

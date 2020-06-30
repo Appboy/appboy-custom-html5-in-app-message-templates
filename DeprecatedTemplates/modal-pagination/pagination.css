@@ -1,0 +1,243 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  font-family: Avenir-Book, sans-serif;
+  color: #222222;
+  text-align: center;
+  margin: 0px;
+}
+
+a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+footer {
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 10px 10px;
+  font-family: Avenir-Black, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  width: 100%;
+  height: 12%;
+  padding: 0px 12px 12px 12px;
+}
+
+.outer {
+  /* To change the background color of the modal, change the rgba configuration.  The last parameter (0.8) configures the opacity. */
+  background-color: rgba(0,0,0,0.8);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+.modal {
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+  width: 85%;
+  height: 70%;
+  z-index: 999;
+}
+
+.top-container {
+  background-size: cover;
+  width: 100%;
+  padding: 22px;
+}
+
+.button-close {
+  position: absolute;
+  z-index: 99;
+  right: 12px;
+  top: 12px;
+}
+
+.header {
+  font-family: Avenir-Medium, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.message {
+  font-family: Avenir-Book, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.bottom-container {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  width: 100%;
+  padding: 0px 22px 22px 22px;
+}
+
+.button-left {
+  background-color: #425271;
+  border-radius: 5px;
+  float: left;
+  width: 47%;
+  height: 100%;
+}
+
+.button-right {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  float: right;
+  width: 47%;
+  height: 100%;
+}
+
+.button-center {
+  background-color: #3CCE93;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.button-left a, .button-right a, .button-center a {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.button-left p, .button-right p, .button-center p {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.slick-container {
+  position: relative;
+  width: 100%;
+  height: 88%;
+}
+
+.slick-list, .slick-track {
+  height: 100%;
+}
+
+.slick-slide .top-container {
+  height: 50%;
+}
+
+.slick-slide.first .top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+}
+
+.slick-slide.second .top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+}
+
+.slick-slide.third .top-container {
+  /* Change the background-image url to a image of your choice */
+  background-image: url('background-dark-blue.png');
+}
+
+.slick-slide .bottom-container {
+  height: 50%;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li {
+  margin: 0px;
+}
+
+.slick-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.2;
+}
+
+.slick-active .slick-dot {
+  opacity: 1;
+  background: #425271;
+}
+
+/* Smaller Devices (iPhone 5, etc) */
+@media only screen and (max-device-width: 568px) {
+  .message {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}
+
+/* Tablets (iPads, etc) */
+@media only screen and (min-device-width: 768px) {
+  .modal {
+    width: 45%;
+    height: 50%;
+  }
+}
+
+/* Landscape */
+@media only screen and (orientation: landscape) {
+  footer {
+    height: 14%;
+  }
+
+  .modal {
+    height: 88%;
+  }
+
+  .header {
+    margin: 10px;
+  }
+
+  .button-left {
+    width: 49%;
+  }
+
+  .button-right {
+    width: 49%;
+  }
+
+  .slick-container {
+    height: 86%;
+  }
+
+  .slick-dots {
+    bottom: 6px;
+  }
+}
+
+/* Landscape for Smaller Devices */
+@media only screen and (max-device-width: 568px) and (orientation: landscape) {
+  .header {
+    margin: 3px;
+  }
+}
+
+/* Landscape for Tablets  */
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+  .modal {
+    height: 60%;
+  }
+}

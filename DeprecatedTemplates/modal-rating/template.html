@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+    <link rel="stylesheet" href="rating.css">
+  </head>
+  <body>
+    <div class="outer">
+      <div class="modal">
+        <div class="button-close">
+          <!-- This is the close button svg.  Add the light.svg to this folder and change the image src to 'light.svg' for a lighter (x) -->
+          <a href="appboy://close"><img src="dark.svg" width="15px;"/></a>
+        </div>
+
+        <div class="top-container">
+          <!-- This is the main image.  Add your image to this folder and change the image src to the image of your choice. -->
+          <div class="main-image"><img src="image-light-grey.png" width="100%"></div>
+          <h3 class="header">Enjoying {{app-name}}?</h3>
+          <p class="message">How likely would you be to recommend {{app-name}} to a friend or colleague?</p>
+        </div>
+
+        <div class="bottom-container">
+          <div class="rate-the-stars">
+            <div class="stars">
+              <i class="fa fa-star empty-star"></i>
+              <i class="fa fa-star empty-star"></i>
+              <i class="fa fa-star empty-star"></i>
+              <i class="fa fa-star empty-star"></i>
+              <i class="fa fa-star empty-star"></i>
+            </div>
+            <p>TAP THE STARS</p>
+          </div>
+        </div>
+
+        <footer>
+          <div class="button-center">
+            <a><p>Submit</p></a>
+          </div>
+        </footer>>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="rating.js"></script>
+    <!-- If you would like to use font awesome stars shown in the example, include font awesome script link below in the script src. -->
+    <script src=""></script>
+  </body>
+</html>
