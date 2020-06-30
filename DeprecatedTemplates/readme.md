@@ -1,0 +1,1 @@
+These templates are still available but have been deprecated and are not supported by Braze.

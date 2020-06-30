@@ -1,4 +1,4 @@
-![Braze Logo](https://info.braze.com/rs/367-GUY-242/images/Braze-Logotype_Black.png)
+<img src="https://info.braze.com/rs/367-GUY-242/images/Braze-Logotype_Black.png" width="860">
 
 HTML5 In-App & In-Browser Community Templates
 ==========
