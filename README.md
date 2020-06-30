@@ -21,6 +21,7 @@ The folders below contain templates that you can alter in your favorite editor t
   * [Fullscreen with pagination](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/BrazeTemplates/fullscreen-pagination)
   * [Email Capture](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/BrazeTemplates/email-capture)
   * [Fullscreen with rating](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/BrazeTemplates/fullscreen-rating)
+  * [Braze Dashboard Templates](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates/tree/master/BrazeTemplates/Braze%20Dashboard%20In-Browser%20Messages)
 * Community Templates
   * Coming Soon!
 * Deprecated Templates
@@ -42,8 +43,8 @@ Braze is also beta testing a new HTML In-App Message editor which will no longer
 
 # Testing
 
-If you would like to test your customized template on a mobile device by using a test Braze campaign, follow the instructions in [Braze Academy](https://www.braze.com/academy/Dashboard_Features/#sending-a-test-in-app-message).  This testing procedure is available if you are using our updated in-app messaging format. 
+If you would like to test your customized template on a mobile device by using a test Braze campaign, follow the instructions in [the Braze User Guide](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/testing/).  This testing procedure is available if you are using our updated in-app messaging format. 
 
 # Communicating with Braze
 
-Custom HTML in-app messages support syntax for communicating with Braze - enabling rich support for actions such as logging a Custom Event, or opening the Braze News Feed.  For more information on doing this from within an app, [click here](https://www.braze.com/academy/Best_Practices/#native-html-messages), and for information on doing this on the web, [click here](https://www.braze.com/academy/Best_Practices/#web-html-messages).
+Custom HTML in-app messages support Javascript syntax for communicating with Braze - enabling rich support for actions such as logging a Custom Event, or opening the Braze News Feed.  For more information on doing this from within an app, [click here](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge)
