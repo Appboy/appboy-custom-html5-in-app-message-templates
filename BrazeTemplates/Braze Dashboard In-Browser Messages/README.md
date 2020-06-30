@@ -18,4 +18,4 @@ These templates are the HTML code which we use to communicate updates to our cus
 
 ## Tool Tip Modal
 
-<img src="/_images/tool-tip-modal.png">
+<img src="/_images/tool-tip-modal.png" width="320">
