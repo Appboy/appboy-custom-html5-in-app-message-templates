@@ -22,10 +22,10 @@ The folders below contain templates that you can alter in your favorite editor t
   * [Email Capture](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/BrazeTemplates/email-capture)
   * [Fullscreen with rating](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/BrazeTemplates/fullscreen-rating)
   * [Braze Dashboard Templates](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates/tree/master/BrazeTemplates/Braze%20Dashboard%20In-Browser%20Messages)
-* Community Templates
-  * Coming Soon!
-* Deprecated Templates
-  * Legacy templates which only work in native applications. 
+  * [Community Templates](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/CommunityTemplates)
+    * This is where you can add your own templates! [See this link for directions as to how to upload new files](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository)
+  * [Deprecated Templates](https://github.com/Appboy/Custom-HTML5-In-App-Message-Templates/tree/master/DeprecatedTemplates)
+    * Legacy templates which only work in native applications and are no longer officially supported by Braze
 
 # Uploading Customized Templates to Braze
 
