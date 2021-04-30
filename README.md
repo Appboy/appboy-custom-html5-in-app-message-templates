@@ -1,7 +1,14 @@
-![Braze Logo](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates/blob/master/braze-logo.png)
+<img src="https://github.com/Appboy/appboy-custom-html5-in-app-message-templates/blob/master/braze-logo.png" width="300" title="Braze Logo" />
 
 HTML5 IAM Templates
 ==========
+
+# :warning: Deprecated :warning:
+
+These templates are no longer maintained and we recommend using our new HTML In-App Message Editor. For more information, please see the following resources:
+
+- [Updated HTML Templates](https://github.com/braze-inc/in-app-message-templates)
+- [Braze's new HTML Editor](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/preview/)
 
 # Overview
 
