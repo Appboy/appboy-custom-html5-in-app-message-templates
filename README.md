@@ -3,6 +3,13 @@
 HTML5 IAM Templates
 ==========
 
+# Deprecated
+
+These templates are no longer maintained and we recommend using our new HTML In-App Message Editor. For more information, please see the following resources:
+
+- [Updated HTML Templates](https://github.com/braze-inc/in-app-message-templates)
+- [Braze's new HTML Editor](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/preview/)
+
 # Overview
 
 Braze provides the ability to create campaigns with fully customizable In-App Messages using HTML5.  We have provided a set of templates and some documentation to get you through the process of creating a customized in-app message.
